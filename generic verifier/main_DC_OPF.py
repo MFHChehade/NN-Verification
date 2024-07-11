@@ -37,7 +37,3 @@ center = [50, 40, 75]
 output_limits = [(70, 95), (70, 95)]
 NN_verifier_instance = NN_verifier(onnx_file = file_path, center = center, output_limits = output_limits, nn_model=model, constraint_function = add_DC_OPF_constraint, norm_type = 'infinity', epsilon_infinity=50, margin=1e-3)
 NN_verifier.maximum_feasible_ball()
-
-input = torch.tensor([50.0, 40.0, 75.0])
-output = model(input)
-print(output)
