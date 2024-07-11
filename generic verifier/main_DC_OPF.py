@@ -14,7 +14,7 @@ onnx_file = 'DC-OPF/model.onnx'
 
 # Generate DC OPF data only if it doesn't already exist
 if not os.path.exists(data_file):
-    df_results = generate_DC_OPF_data(100)
+    df_results = generate_DC_OPF_data(1000)
     df_results.to_csv(data_file, index=False)
     print(df_results.head())
 else:
